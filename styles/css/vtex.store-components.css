@@ -1,0 +1,22 @@
+:global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
+    background: #212121;
+  }
+:global(.vtex-input-prefix__group){
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+    border-bottom: 1px solid #ffffff;
+}
+
+:global(.vtex-store-components-3-x-searchBarIcon){
+    color: #ffffff;
+}
+:global(.vtex-store__template){
+    background-color: #303030;
+}
+.imageElement{
+    border-radius: 15px;
+    width: 80%;
+    height: 80%;
+}

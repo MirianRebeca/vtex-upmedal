@@ -1,0 +1,71 @@
+{
+  "store.home": { 
+    "blocks": [
+      "slider-layout#promo",
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 18
+      }
+    },
+    "blocks": ["search-result-layout.desktop#lp", "search-result-layout.mobile"]
+  },
+  "search-result-layout.desktop#lp":{
+    "children": [
+      "search-content#lp"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content#lp":{
+    "blocks":[
+      "gallery#lp", "not-found"
+    ]
+  },
+  
+  "product-summary.shelf#lp": {
+    "children": [
+      "product-summary-name",
+      "product-images#lp",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
+  },
+  "product-images#lp":{
+    "props":{
+      "showNavigationArrows": true,
+      "showPaginationDots": true
+    }
+  },
+  
+  "gallery#lp": {
+    "props":{
+      "layouts": [
+      {
+        "name": "grind",
+        "component": "GrindSumary",
+        "itemsPerRow":{
+          "(min-width: 1300px)": 2,
+          "desktop": 2,
+          "tablet": 2,
+          "phone": 2
+        }
+      },
+      {
+        "name": "list",
+        "component": "ListSummary",
+        "itemsPerRow": 1
+      }
+      ],
+      "ListSummary": "product-summary.shelf#lp",
+      "GrindSumary": "product-summary.shelf#lp"
+    }
+}
+  }
